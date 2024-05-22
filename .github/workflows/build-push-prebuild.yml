@@ -5,6 +5,8 @@ on: # rebuild any PRs and main branch changes
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 21 * * *' # build latest image at 21:00 UTC
 
 jobs:
   build:
