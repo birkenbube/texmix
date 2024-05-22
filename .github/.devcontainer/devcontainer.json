@@ -1,7 +1,7 @@
 {
 	// This pulls the latest texlive image from Deutschsprachige Anwendervereinigung TeX e.V.,
 	// adds the prebuilt features for VSCode devcontainers and redeploys the image on GHCR.
-	"name": "TeXmIx-prebuild",
+	"name": "texmix",
 	"image": "ghcr.io/dante-ev/texlive:edge",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
