@@ -2,7 +2,8 @@
 	// This pulls the latest texlive image from Deutschsprachige Anwendervereinigung TeX e.V.,
 	// adds the prebuilt features for VSCode devcontainers and redeploys the image on GHCR.
 	"name": "texmix",
-	"image": "ghcr.io/dante-ev/texlive:edge",
+	// "image": "ghcr.io/dante-ev/texlive:edge",
+	"dockerFile": "Dockerfile",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
 			"installZsh": "true",
@@ -16,6 +17,5 @@
 			"ppa": "false"
 		}
 	},
-	"postCreateCommand": "tlmgr update --self --all", // update texlive packages
 	"remoteUser": "texmix"
 }
