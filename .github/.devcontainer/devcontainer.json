@@ -16,5 +16,6 @@
 			"ppa": "false"
 		}
 	},
+	"postCreateCommand": "tlmgr update --self --all", // update texlive packages
 	"remoteUser": "texmix"
 }
