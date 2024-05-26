@@ -9,7 +9,8 @@
 			"extensions": [
 				"james-yu.latex-workshop",
 				"tecosaur.latex-utilities",
-				"yzhang.markdown-all-in-one"
+				"yzhang.markdown-all-in-one",
+				"neo-ltex.ltex"
 			]
 		}
 	},
