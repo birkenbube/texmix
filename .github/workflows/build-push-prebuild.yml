@@ -32,4 +32,6 @@ jobs:
           # Only push image on schedule or push to main branch
           push: filter
           refFilterForPush: "refs/heads/main"
-          eventFilterForPush: push schedule
+          eventFilterForPush: |
+            push
+            schedule
