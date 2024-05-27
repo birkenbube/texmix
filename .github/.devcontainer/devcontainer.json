@@ -15,6 +15,9 @@
 		"ghcr.io/devcontainers/features/git:1": {
 			"version": "latest",
 			"ppa": "false"
+		},
+		"ghcr.io/devcontainers-contrib/features/bash-command:1": {
+			"command": "tlmgr update --self --all"
 		}
 	},
 	"remoteUser": "texmix"
