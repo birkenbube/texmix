@@ -17,6 +17,5 @@
 			"ppa": "false"
 		}
 	},
-	"postCreateCommand": "tlmgr update --self --all",
 	"remoteUser": "texmix"
 }
