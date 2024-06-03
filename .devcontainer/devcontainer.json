@@ -11,7 +11,13 @@
 				"tecosaur.latex-utilities",
 				"yzhang.markdown-all-in-one",
 				"neo-ltex.ltex"
-			]
+			],
+			"settings": {
+				"editor.wordWrap": "on",
+				"latex-workshop.intellisense.citation.backend": "biblatex",
+				// Fix pdf viewer jumping to top of document, see https://tex.stackexchange.com/a/706744
+				"latex-workshop.latex.watch.pdf.delay": 1000
+			}
 		}
 	},
 	"remoteUser": "texmix"
