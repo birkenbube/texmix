@@ -10,7 +10,8 @@
 				"james-yu.latex-workshop",
 				"tecosaur.latex-utilities",
 				"yzhang.markdown-all-in-one",
-				"neo-ltex.ltex"
+				"neo-ltex.ltex",
+				"DavidAnson.vscode-markdownlint"
 			],
 			"settings": {
 				"editor.wordWrap": "on",
