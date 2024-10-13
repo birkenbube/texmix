@@ -30,6 +30,7 @@ jobs:
           imageName: ghcr.io/${{ github.repository }}
           # cacheFrom: ghcr.io/${{ github.repository }}
           # Only push image on schedule or push to main branch
+          noCache: true
           push: filter
           refFilterForPush: "refs/heads/main"
           eventFilterForPush: |
