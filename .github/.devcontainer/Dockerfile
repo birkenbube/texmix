@@ -1,6 +1,9 @@
 FROM ghcr.io/dante-ev/texlive:edge
 WORKDIR /tmp/dockerwork
 
+# Update apt packages
+RUN apt update && apt upgrade -y
+
 # update texlive packages
 RUN tlmgr update --self --all
 
