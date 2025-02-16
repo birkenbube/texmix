@@ -1,6 +1,19 @@
 FROM ghcr.io/dante-ev/texlive:edge
 WORKDIR /tmp/dockerwork
 
+ARG USERNAME=texmix
+ARG USER_ID=1000
+ARG USER_GID=${USER_ID}
+
+# Remove existing texlive user and group
+RUN userdel -r texlive && groupdel texlive
+
+# Setup user and enable passwordless sudo
+RUN groupadd --gid ${USER_GID} ${USERNAME} && \
+    useradd --uid ${USER_ID} --gid ${USER_GID} -m ${USERNAME} && \
+    echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME} && \
+    chmod 0440 /etc/sudoers.d/${USERNAME}
+
 # Update apt packages
 RUN apt update && apt upgrade -y
 
