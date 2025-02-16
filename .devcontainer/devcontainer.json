@@ -1,25 +1,18 @@
 {
 	"name": "texmix",
-	"image": "ghcr.io/birkenbube/texmix:latest",
+	"image": "ghcr.io/birkenbube/texmix:latest"
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Configure tool-specific properties.
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"james-yu.latex-workshop",
-				"tecosaur.latex-utilities",
-				"yzhang.markdown-all-in-one",
-				"ltex-plus.vscode-ltex-plus",
-				"DavidAnson.vscode-markdownlint"
-			],
-			"settings": {
-				"editor.wordWrap": "on",
-				"latex-workshop.intellisense.citation.backend": "biblatex",
-				// Fix pdf viewer jumping to top of document, see https://tex.stackexchange.com/a/706744
-				"latex-workshop.latex.watch.pdf.delay": 1000
-			}
-		}
-	},
-	"remoteUser": "texmix"
+
+	// Extensions can be removed with '-' before the extension name, e.g.:
+
+	// "customizations": {
+	// 	"vscode": {
+	// 		"extensions": [
+	// 			"-ltex-plus.vscode-ltex-plus"
+	// 		]
+	// 	}
+	// }
 }

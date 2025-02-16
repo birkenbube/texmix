@@ -6,15 +6,29 @@
 	"dockerFile": "Dockerfile",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
-			"installZsh": "true",
-			"username": "texmix",
-			"userUid": "1000",
-			"userGid": "1000",
-			"upgradePackages": "true"
+			"installOhMyZsh": true,
+			"configureZshAsDefaultShell": true
 		},
 		"ghcr.io/devcontainers/features/git:1": {
 			"version": "latest",
 			"ppa": "false"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"james-yu.latex-workshop",
+				"tecosaur.latex-utilities",
+				"yzhang.markdown-all-in-one",
+				"ltex-plus.vscode-ltex-plus",
+				"DavidAnson.vscode-markdownlint"
+			],
+			"settings": {
+				"editor.wordWrap": "on",
+				"latex-workshop.intellisense.citation.backend": "biblatex",
+				// Fix pdf viewer jumping to top of document, see https://tex.stackexchange.com/a/706744
+				"latex-workshop.latex.watch.pdf.delay": 1000
+			}
 		}
 	},
 	"remoteUser": "texmix"
