@@ -5,6 +5,9 @@ ARG USERNAME=texmix
 ARG USER_ID=1000
 ARG USER_GID=${USER_ID}
 
+# Update apt packages and make sure sudo is installed
+RUN apt update && apt upgrade -y && apt install -y sudo
+
 # Remove existing texlive user
 RUN userdel -r texlive
 
@@ -13,9 +16,6 @@ RUN groupadd --gid ${USER_GID} ${USERNAME} && \
     useradd --uid ${USER_ID} --gid ${USER_GID} -m ${USERNAME} && \
     echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME} && \
     chmod 0440 /etc/sudoers.d/${USERNAME}
-
-# Update apt packages
-RUN apt update && apt upgrade -y
 
 # update texlive packages
 RUN tlmgr update --self --all
