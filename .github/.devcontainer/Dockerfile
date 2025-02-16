@@ -5,8 +5,8 @@ ARG USERNAME=texmix
 ARG USER_ID=1000
 ARG USER_GID=${USER_ID}
 
-# Remove existing texlive user and group
-RUN userdel -r texlive && groupdel texlive
+# Remove existing texlive user
+RUN userdel -r texlive
 
 # Setup user and enable passwordless sudo
 RUN groupadd --gid ${USER_GID} ${USERNAME} && \
