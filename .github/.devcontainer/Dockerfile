@@ -17,8 +17,8 @@ RUN groupadd --gid ${USER_GID} ${USERNAME} && \
     echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME} && \
     chmod 0440 /etc/sudoers.d/${USERNAME}
 
-# update texlive packages
-RUN tlmgr update --self --all
+# update texlive packages, ignore in case of failed update (e.g. due to "TeX Live installation is older than the remote repository" error)
+RUN tlmgr update --self --all || true
 
 # pre-download ltex-ls (Removed due to ltex+ having very frequent updates)
 # RUN wget -qO- https://github.com/valentjn/ltex-ls/releases/download/15.2.0/ltex-ls-15.2.0-linux-x64.tar.gz | \
